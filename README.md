@@ -4,6 +4,7 @@ SafeSpace is a desktop-based mental health support application designed to provi
 
 This application connects help seekers with verified counsellors through a structured appointment system while maintaining user privacy and data integrity.
 
+---
 
 📌 Features
 
