@@ -53,7 +53,7 @@ public class CounsellorDashboard extends JFrame {
         panel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
         
         JLabel welcomeLabel = new JLabel("Welcome, Dr. " + counsellor.getName(), JLabel.CENTER);
-        welcomeLabel.setFont(new Font("Arial", Font.BOLD, 20));
+        welcomeLabel.setFont(new Font("Arial", Font.PLAIN, 20));
         
         String[] columns = {"ID", "Date", "Time", "Help Seeker", "Status"};
         DefaultTableModel model = new DefaultTableModel(columns, 0) {
