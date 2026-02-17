@@ -20,7 +20,7 @@ public class LoginFrame extends JFrame {
     private CounsellorDAO counsellorDAO = new CounsellorDAO();
     
     public LoginFrame() {
-        setTitle("Mental Health Support Platform - Login");
+        setTitle("SafeSpace - A Mental Health Support Platform");
         setSize(450, 400);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
@@ -45,7 +45,7 @@ public class LoginFrame extends JFrame {
         titleLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
         
         JLabel subtitleLabel = new JLabel("Anonymous • Safe • Professional");
-        subtitleLabel.setFont(new Font("Arial", Font.PLAIN, 14));
+        subtitleLabel.setFont(new Font("Arial", Font.BOLD, 14));
         subtitleLabel.setForeground(Color.WHITE);
         subtitleLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
         
@@ -81,15 +81,13 @@ public class LoginFrame extends JFrame {
         loginButton = new JButton("Login");
         loginButton.setFont(new Font("Arial", Font.BOLD, 14));
         loginButton.setBackground(new Color(70, 130, 180));
-        loginButton.setForeground(Color.WHITE);
         loginButton.setFocusPainted(false);
         loginButton.setPreferredSize(new Dimension(120, 35));
         loginButton.addActionListener(e -> handleLogin());
         
         registerButton = new JButton("Register");
-        registerButton.setFont(new Font("Arial", Font.PLAIN, 14));
+        registerButton.setFont(new Font("Arial", Font.BOLD, 14));
         registerButton.setBackground(new Color(100, 149, 237));
-        registerButton.setForeground(Color.WHITE);
         registerButton.setFocusPainted(false);
         registerButton.setPreferredSize(new Dimension(120, 35));
         registerButton.addActionListener(e -> handleRegister());
@@ -102,8 +100,6 @@ public class LoginFrame extends JFrame {
         mainPanel.add(buttonPanel, BorderLayout.SOUTH);
         
         add(mainPanel);
-        
-        passwordField.addActionListener(e -> handleLogin());
     }
     
     private void handleLogin() {
@@ -122,14 +118,14 @@ public class LoginFrame extends JFrame {
         if (role.equals("Admin")) {
             if (contact.equals("admin") && password.equals("admin123")) {
                 JOptionPane.showMessageDialog(this,
-                    "Admin login successful!",
+                    "Admin login!",
                     "Success",
                     JOptionPane.INFORMATION_MESSAGE);
                 dispose();
                 new AdminDashboard().setVisible(true);
             } else {
                 JOptionPane.showMessageDialog(this,
-                    "Invalid admin credentials!",
+                    "Invalid!",
                     "Login Failed",
                     JOptionPane.ERROR_MESSAGE);
             }
@@ -147,7 +143,7 @@ public class LoginFrame extends JFrame {
                 new HelpSeekerDashboard(helpSeeker).setVisible(true);
             } else {
                 JOptionPane.showMessageDialog(this,
-                    "Invalid credentials!\nPlease check your contact number and password.",
+                    "Check your contact number and password.",
                     "Login Failed",
                     JOptionPane.ERROR_MESSAGE);
             }
@@ -165,7 +161,7 @@ public class LoginFrame extends JFrame {
                 new CounsellorDashboard(counsellor).setVisible(true);
             } else {
                 JOptionPane.showMessageDialog(this,
-                    "Invalid credentials!\nPlease check your contact number and password.",
+                    "Check your contact number and password.",
                     "Login Failed",
                     JOptionPane.ERROR_MESSAGE);
             }
@@ -177,8 +173,8 @@ public class LoginFrame extends JFrame {
         
         if (role.equals("Admin")) {
             JOptionPane.showMessageDialog(this,
-                "Admin accounts cannot be registered through the system.",
-                "Registration Not Available",
+                "Error!",
+                "Admin Registration Not Allowed",
                 JOptionPane.INFORMATION_MESSAGE);
             return;
         }

@@ -23,7 +23,7 @@ public class HelpSeekerDashboard extends JFrame {
     public HelpSeekerDashboard(HelpSeeker helpSeeker) {
         this.helpSeeker = helpSeeker;
         
-        setTitle("Help Seeker Dashboard - " + helpSeeker.getName());
+        setTitle("Help Seeker Dashboard");
         setSize(900, 600);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
@@ -109,11 +109,9 @@ public class HelpSeekerDashboard extends JFrame {
         valueLabel.setFont(new Font("Arial", Font.BOLD, 36));
         valueLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
         
-        card.add(Box.createVerticalGlue());
         card.add(titleLabel);
-        card.add(Box.createRigidArea(new Dimension(0, 10)));
         card.add(valueLabel);
-        card.add(Box.createVerticalGlue());
+        card.setBorder(BorderFactory.createEmptyBorder(10,10,10,10));
         
         return card;
     }
@@ -205,7 +203,7 @@ public class HelpSeekerDashboard extends JFrame {
             if (moodLogDAO.addMoodLog(log)) {
                 if (score <= 3) {
                     JOptionPane.showMessageDialog(dialog,
-                        "⚠️ Critical mood score detected!\nAn alert has been created and your emergency contact will be notified.",
+                        "Critical mood score!\nAn alert has been sent to your emergency contact.",
                         "Alert Created",
                         JOptionPane.WARNING_MESSAGE);
                 } else {

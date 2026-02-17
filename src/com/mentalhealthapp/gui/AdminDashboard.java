@@ -80,11 +80,11 @@ public class AdminDashboard extends JFrame {
             if (selectedRow >= 0) {
                 int alid = (Integer) table.getValueAt(selectedRow, 0);
                 if (alertDAO.resolveAlert(alid)) {
-                    JOptionPane.showMessageDialog(this, "Alert resolved successfully!", "Success", JOptionPane.INFORMATION_MESSAGE);
+                    JOptionPane.showMessageDialog(this, "Alert resolved.", "Success", JOptionPane.INFORMATION_MESSAGE);
                     loadAlerts(model);
                 }
             } else {
-                JOptionPane.showMessageDialog(this, "Please select an alert to resolve!", "Warning", JOptionPane.WARNING_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Select an alert to resolve.", "Warning!", JOptionPane.WARNING_MESSAGE);
             }
         });
         
@@ -108,7 +108,7 @@ public class AdminDashboard extends JFrame {
                 alert.getLogId(),
                 alert.getEmergencyContact(),
                 alert.getStatus(),
-                alert.getCreatedAt().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm"))
+                alert.getCreatedAt().format(DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm"))
             });
         }
     }

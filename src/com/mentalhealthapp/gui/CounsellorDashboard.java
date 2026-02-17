@@ -130,13 +130,13 @@ public class CounsellorDashboard extends JFrame {
                 String newStatus = (String) statusCombo.getSelectedItem();
                 
                 if (appointmentDAO.updateAppointmentStatus(aid, newStatus)) {
-                    JOptionPane.showMessageDialog(this, "Status updated successfully!", "Success", JOptionPane.INFORMATION_MESSAGE);
+                    JOptionPane.showMessageDialog(this, "Status updated.", "Success", JOptionPane.INFORMATION_MESSAGE);
                     aidField.setText("");
                 } else {
-                    JOptionPane.showMessageDialog(this, "Failed to update status!", "Error", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(this, "Failed to update!", "Error", JOptionPane.ERROR_MESSAGE);
                 }
             } catch (NumberFormatException ex) {
-                JOptionPane.showMessageDialog(this, "Please enter a valid Appointment ID!", "Error", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Enter a valid Appointment ID!", "Error", JOptionPane.ERROR_MESSAGE);
             }
         });
         

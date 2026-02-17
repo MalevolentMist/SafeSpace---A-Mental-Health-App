@@ -13,15 +13,11 @@ public class MentalHealthApp {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        
-        System.out.println("==============================================");
-        System.out.println("  Mental Health Support Platform - Starting");
-        System.out.println("==============================================");
-        
+        System.out.println("  Mental Health Support Platform");
         if (!DatabaseConnection.testConnection()) {
             JOptionPane.showMessageDialog(null,
                 "Failed to connect to database!\n" +
-                "Please check your database configuration in DatabaseConnection.java",
+                "Please database configuration",
                 "Database Error",
                 JOptionPane.ERROR_MESSAGE);
             System.exit(1);
