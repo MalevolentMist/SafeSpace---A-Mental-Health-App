@@ -4,20 +4,21 @@ SafeSpace is a desktop-based mental health support application designed to provi
 
 This application connects help seekers with verified counsellors through a structured appointment system while maintaining user privacy and data integrity.
 
+
 📌 Features
 
-🔐 Anonymous Help Seeker Registration & Login
+Anonymous Help Seeker Registration & Login
 
-👩‍⚕️ Counsellor Login & Dashboard
+Counsellor Login & Dashboard
 
-📅 Appointment Scheduling System
+Appointment Scheduling System
 
-🚨 Alert System for Urgent Cases
+Alert System for Urgent Cases
 
-🗂️ Admin Dashboard for Monitoring & Management
+Admin Dashboard for Monitoring & Management
 
-📊 Structured Mental Health Record Tracking
+Structured Mental Health Record Tracking
 
-🖥️ User-friendly GUI built with Java Swing
+User-friendly GUI built with Java Swing
 
-🛢️ MySQL Database Integration for Secure Data Storage
+MySQL Database Integration for Secure Data Storage
