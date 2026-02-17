@@ -7,10 +7,17 @@ This application connects help seekers with verified counsellors through a struc
 📌 Features
 
 🔐 Anonymous Help Seeker Registration & Login
+
 👩‍⚕️ Counsellor Login & Dashboard
+
 📅 Appointment Scheduling System
+
 🚨 Alert System for Urgent Cases
+
 🗂️ Admin Dashboard for Monitoring & Management
+
 📊 Structured Mental Health Record Tracking
+
 🖥️ User-friendly GUI built with Java Swing
+
 🛢️ MySQL Database Integration for Secure Data Storage
